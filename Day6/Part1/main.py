@@ -1,7 +1,5 @@
 import math
 
-numbers = []
-
 with open("../input.txt") as f:
   numbers = [line.strip().split() for line in f.readlines()]
 
