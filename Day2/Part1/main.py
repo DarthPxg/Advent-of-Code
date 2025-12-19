@@ -1,4 +1,7 @@
-ids = open("../input.txt").readline().strip().split(",")
+ids = ""
+with open("../input.txt") as f:
+  ids = f.readline().strip().split(",")
+
 invalidIds = []
 
 for id_range in ids:
