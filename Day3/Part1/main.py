@@ -22,7 +22,3 @@ for bank in banks:
   total += finalNum
 
 print(total)
-
-
-
-
