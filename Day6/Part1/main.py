@@ -4,7 +4,6 @@ with open("../input.txt") as f:
   numbers = [line.strip().split() for line in f.readlines()]
 
 total = 0
-
 operations = numbers[-1]
 numbers.pop(-1)
 
