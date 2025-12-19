@@ -5,20 +5,20 @@ with open("../input.txt") as f:
 total = 0
 
 for bank in banks:
-  firstNum = []
-  secondNum = 0
+  removals = len(bank) - 12
+  stack = []
 
-  for i in range(len(bank)-1):
-    if len(firstNum) == 0 or int(bank[i]) > firstNum[1]:
-      firstNum.clear()
-      firstNum.append(i)
-      firstNum.append(int(bank[i]))
+  for digit in bank:
+      while stack and removals > 0 and stack[-1] < digit:
+          stack.pop()
+          removals -= 1
+      stack.append(digit)
 
-  for j in range(firstNum[0]+1, len(bank)):
-    if int(bank[j]) > secondNum:
-      secondNum = int(bank[j])
+  while removals > 0:
+      stack.pop()
+      removals -= 1
 
-  finalNum = int(str(firstNum[1]) + str(secondNum))
-  total += finalNum
+  result = ''.join(stack)
+  total += int(result)
 
 print(total)
