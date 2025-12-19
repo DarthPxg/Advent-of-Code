@@ -13,7 +13,7 @@ numbers.pop(-1)
 for j in range(len(operations)):
   numsToAdd = []
   for i in range(len(numbers)):
-    if 0 <= j < len(numbers[i]) and numbers[i][j] != "" and numbers[i][j] != " ":
+    if 0 <= j < len(numbers[i]):
       numsToAdd.append(int(numbers[i][j]))
 
   if operations[j] == "*":
