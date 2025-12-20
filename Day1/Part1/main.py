@@ -1,4 +1,5 @@
-lines = [int(line.strip().replace("L", "-").replace("R", "")) for line in open("../input.txt")]
+with open("../input.txt") as f:
+  lines = [int(line.strip().replace("L", "-").replace("R", "")) for line in f]
 
 dialNumber = 50
 zeroCount = 0
